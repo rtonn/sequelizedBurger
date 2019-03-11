@@ -47,7 +47,18 @@ router.post('/:id', function(req, res) {
     res.redirect("/index");
   });
 });
-   
+  
+//Delete a burger
+router.post('/delete/:id', function(req, res){
+  models.burger.destroy(
+    {
+      where: {id: req.params.id}
+    })
+    .then(function(data){
+      // res.json(data);
+      res.redirect("/index") 
+    })
+})
 
 
 // Export routes for server.js to use.......................

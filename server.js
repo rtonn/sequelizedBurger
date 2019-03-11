@@ -2,6 +2,7 @@
 // Dependencies
 var express = require("express");
 const db = require('./models') //..sequelizer
+var methodOverride = require('method-override')
 
 // Setup Express
 var app = express();
@@ -22,6 +23,8 @@ app.set("view engine", "handlebars");
 // Import routes and give the server access to them.
 var router = require("./controllers/burgers_controller.js");
 app.use('/', router); 
+
+app.use(methodOverride('_method')) //..method-overide
 
 // Start our server so that it can begin listening to client requests.
 db.sequelize.sync().then(function() {  //..sequelizer 
