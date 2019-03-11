@@ -5,9 +5,12 @@ var models = require("../models");
 
 //..........................................................
 
+router.get("/", function(req, res) {
+  res.redirect("/index");
+});
 
 //GET route 'findAll' to get all burgers from database.
-router.get('/', function(req, res){
+router.get('/index', function(req, res){
   models.burger.findAll({})
   .then(function(data) {
     var hbsObject = 
@@ -26,22 +29,22 @@ router.post('/', function (req, res) {
       burger_name: req.body.burger_name,            
     })
     .then (function() {
-    res.redirect("/");
+    res.redirect("/index");
   }); 
 });
 
 
 //Devour a burger
-router.put('/:id', function(req, res) { 
+router.post('/:id', function(req, res) { 
   models.burger.update(
     {
       devoured: req.body.devoured,  
     },
     {
-      where: {id: req.body.id} //or (req.params.id)?
+      where: {id: req.params.id} 
     })
     .then(function() {
-    res.redirect("/");
+    res.redirect("/index");
   });
 });
    
