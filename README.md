@@ -9,7 +9,7 @@ The user may then eat any burger by clicking on the associated "Devour" button. 
 The user may also delete any "Devoured" burger from the list to remove it completely. This will also remove the entry from the database. 
 
 ## Heroku Deployment
-https://rt-umn-burgertime.herokuapp.com/
+https://rt-umn-sequelizedburger.herokuapp.com/
 
 ## Technologies used
 - Node.js
@@ -20,8 +20,12 @@ https://rt-umn-burgertime.herokuapp.com/
 - handlebars NPM Package - https://www.npmjs.com/package/handlebars
 - express-handlbars NPM Package - https://www.npmjs.com/package/express-handlebars
 - sequelize
+- method-overide NPM package
 
 ## Screen Shots:
+![img1](https://user-images.githubusercontent.com/44482712/54168761-20c5b600-443e-11e9-80e8-e5241faef7d2.png)
+![scr1](https://user-images.githubusercontent.com/44482712/54168765-228f7980-443e-11e9-8868-25aecde9c0ab.png)
+![scr2](https://user-images.githubusercontent.com/44482712/54168767-24593d00-443e-11e9-9db6-0f41b9a02de8.png)
 
 
 
